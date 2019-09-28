@@ -1,0 +1,26 @@
+<header>
+  <div class="container">
+    <div class="main-nav">
+      <ul class="product-nav">
+        <li><a class="<%=path === '/shop' ? 'active' : '' %>" href="/shop">Shop</a></li>
+        <li><a class="<%=path === '/admin/cart' ? 'active' : '' %>" href="/admin/cart">Cart</a></li>
+        <li><a class="<%=path === '/shop/checkout' ? 'active' : '' %>" href="/shop/checkout">Checkout</a></li>
+        <li><a class="<%=path === '/shop/order' ? 'active' : '' %>" href="/shop/order">Order</a></li>
+      
+        <%if(isLogged) { %>
+          <li><a class="<%=path === '/admin/admin-product' ? 'active' : '' %>" href="/admin/admin-product">Admin Product</a></li>
+          <li><a class="<%=path === '/admin/add-product' ? 'active' : '' %>" href="/admin/add-product">Add</a></li>
+        <% } %>
+      </ul>
+      <ul class="auth-nav">
+        <%if(!isLogged) { %>
+          <li><a class="<%=path === '/auth/register' ? 'active' : '' %>" href="/auth/register">Register</a></li>
+          <li><a class="<%=path === '/auth/login' ? 'active' : '' %>" href="/auth/login">Login</a></li>
+        <% } else { %>
+          <li><a class="username" href="#"><%=shortName %></a></li>
+          <li><a href="/auth/logout">Log Out</a></li>
+        <% } %>
+      </ul>
+    </div>
+  </div>
+</header>

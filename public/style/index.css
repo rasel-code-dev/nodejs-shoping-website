@@ -1,0 +1,89 @@
+body{
+  margin: 0;
+  padding: 0;
+  font-family: roboto;
+}
+.container{
+  width: 90%;
+  margin: auto;
+  display: block;
+}
+.main-nav{
+  display: flex;
+  justify-content: space-between;
+}
+header{
+  background-color: rgb(55, 21, 134);
+}
+
+.product-nav{
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a{
+  margin-right: 10px;
+  text-decoration: none;
+  color: rgb(219, 219, 219);
+  font-family: roboto slab;
+  padding: 10px 0px;
+  display: inline-block;
+}
+a:hover{
+  text-decoration: none;
+  color: rgb(250, 29, 239);
+}
+
+.auth-nav{
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.active{
+  font-weight: 900;
+  color: rgb(243, 49, 49)
+}
+
+
+.notification{
+  color: rgb(255, 255, 255);
+  background-color: rgba(255, 19, 19, 0.712);
+  padding: 2px 10px;
+  margin: 10px 0px;
+  border-radius: 5px ;
+  box-shadow: 0 0 0 0px grey, 
+              0 0 4px 1px rgb(255, 118, 118);
+  transform: scale(1);
+  animation: notiShowEffect 1s ease;        
+}
+@keyframes notiShowEffect{
+  0%{
+    font-size: 0px;
+    transform: scale(0);
+  }
+  100%{ 
+    font-size: 16px;
+    transform: scale(1); 
+  }
+}
+
+.noti-hide{
+  font-size: 0px;
+  /* height: 0; */
+  overflow: hidden;
+  transform: scale(0);
+  transition: all 1s ease;   
+}
+
+.username{
+  color: rgb(36, 221, 29)
+}
+
+.action{
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}

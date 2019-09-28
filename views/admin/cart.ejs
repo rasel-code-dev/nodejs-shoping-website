@@ -1,0 +1,35 @@
+<%-include('../common/head.ejs') %>
+<link rel="stylesheet" href="/style/product-list.css">
+
+</head>
+
+<body>
+  <%-include('../common/navigation.ejs') %>
+
+  <div class="container">
+      <%if(message){ %>
+        <p class="notification"><%=message %></p>
+      <% } %>
+
+      <h2>Your Cart:</h2>
+      <% if(cart) { %>
+        <h3>Name: <%=cart.userId.username %></h3>
+        <% for( let item of cart.cart.items ) { %>
+          <ul class="cart-card">
+            <a class="product-detail-link" href="/shop/products/<%=item.productId._id %>">
+              <h4><%=item.productId.title %></h4>
+            </a>
+            <p>Price: $<%=item.productId.price %></p>
+            <p>Quantity: <%=item.quantity %>
+              <a class="delete-cart-icon" href="/admin/delete-cart/<%=item.productId._id %>"></a>
+            </p>
+          </ul>
+        <% } %> 
+      <% } %> 
+
+      <div class="row justify-content-center">
+         
+       </div>
+  
+
+  <%-include('../common/end.ejs') %>

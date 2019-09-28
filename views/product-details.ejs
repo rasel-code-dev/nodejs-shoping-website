@@ -1,0 +1,36 @@
+<%-include('./common/head.ejs') %>
+<link rel="stylesheet" href="/style/product-list.css">
+
+</head>
+
+<body>
+  <%-include('./common/navigation.ejs') %>
+
+  <div class="container">
+      <%if(message){ %>
+        <p class="notification"><%=message %></p>
+      <% } %>
+
+      <div class="row justify-content-center">
+          <div class="col-12">
+            <div class="product-details-container">
+                <h1 class="product-title m-5">Title: <%=product.title %></h1>
+                <img class="product-detail-img" src="/images/1230858243336-rainbow_natural_wallpaperfbdj~01.jpg" alt="FDFD">    
+                <p class="product-detail-price">Price: $<%=product.price %></p>
+            
+                <%if(isLogged) { %>
+                  <form action="/admin/add-cart" method="post">
+                    <input type="hidden" name="productId" value="<%=product._id %>">
+                    <button type="submit" class="product-cart-btn">Add Cart</button>
+                  </form>
+                <% } else { %>
+                  <form action="/auth/register" method="GET">
+                    <button type="submit" class="product-cart-btn">Add Cart</button>
+                  </form>
+                <% } %>   
+            
+            </div>                 
+          </div>
+      </div>
+
+  <%-include('./common/end.ejs') %>

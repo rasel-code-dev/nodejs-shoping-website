@@ -1,0 +1,37 @@
+<%-include('../common/head.ejs') %>
+</head>
+
+<body>
+  <%-include('../common/navigation.ejs') %>
+  <div class="container">
+    <div class="row mt-4">
+      <h1 class="mb-4">Add New Product</h1>
+      <div class="col-sm-10 col-md-8 col-lg-6 m-auto">
+          <%if(message){ %>
+            <p class="notification"><%=message %></p>
+          <% } %>
+          <form method="post" action="/admin/add-product">
+            <div class="form-group">
+              <label for="">Title</label>
+              <input type="text" name="title" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="">ImageUrl</label>
+              <input type="text" name="imageUrl" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="">Price</label>
+              <input type="number" name="price" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="">Description</label>
+              <textarea name="password" class="form-control"></textarea>
+            </div>
+            <button class="btn btn-sm btn-info" type="submit">Add</button>
+          </form>
+      </div>
+    </div>
+  </div>
+  
+
+  <%-include('../common/end.ejs') %>

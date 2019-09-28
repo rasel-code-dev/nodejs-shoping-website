@@ -1,0 +1,89 @@
+.product-box {
+  box-shadow: 0 0 5px 0 black;
+  width: 230px;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.product-box_image {
+  width: 100%;
+}
+.product-box_image img{
+  width: 100%;
+}
+
+.product-title {
+  text-align: center;
+}
+
+.product-price {
+  text-align: center;
+}
+
+.product-cart-btn {
+  padding: 3px 10px;
+  background: rgb(52, 67, 201);
+  border: 1px solid rgb(17, 133, 228);
+  outline: none !important;
+  color: rgb(236, 236, 236);
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: all .2s ease;
+}
+.product-cart-btn:hover {
+  transform: translateY(-1px);
+  transition: all .2s ease;
+}
+.product-cart-btn:active {
+  transform: translateY(0);
+  transition: all .2s ease;
+  outline: none !important;
+}
+
+.cart-card{
+  border: 1px solid green;
+  color: rgb(44, 44, 44);
+  padding: 10px;
+  text-align: center;
+  margin: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.cart-card h4{
+  margin: 0;
+  padding: 0;
+}
+.cart-card p{
+  margin: 0;
+  padding: 0;
+  user-select: none;
+}
+
+.delete-cart-icon::before{
+  content: '\f2ed';
+  font-family: 'Font Awesome 5 Free';
+  color: rgb(201, 25, 25);
+  cursor: pointer;
+}
+.delete-cart-icon:hover{
+  color: rgb(250, 8, 8);
+}
+
+.product-details-container{
+  text-align: center;
+}
+
+.product-detail-link{
+  color: rgb(27, 27, 27);
+}
+.product-detail-link:hover{
+  color: rgb(81, 69, 248);
+}
+.product-detail-img{
+  width: 100%;
+}
+.product-detail-price{
+  margin: 20px;
+}
