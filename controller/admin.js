@@ -145,3 +145,4 @@ exports.deleteCart = async (req, res, next) => {
   await cartData.save();
   res.redirect("/admin/cart");
 };
+
